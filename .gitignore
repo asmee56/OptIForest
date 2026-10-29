@@ -3,3 +3,13 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .idea
+
+# Local Python environment
+venv/
+.venv/
+
+# Downloaded external dataset
+data/external/
+
+# Python and testing caches
+.pytest_cache/

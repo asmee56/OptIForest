@@ -1,0 +1,73 @@
+OptIForest Experimental Results
+
+AD dataset
+Threshold: 403
+Branch: 2
+ROC-AUC mean: 0.7718995709657648
+ROC-AUC std: 0.004484190208714892
+AP mean: 0.4261776270639352
+AP std: 0.026947322996274826
+Training time: 8.2348939259847
+Testing time: 14.807015721003214
+
+Synthetic v1
+Observations: 3250
+Features: 50
+Normal: 2800
+Anomalies: 450
+Anomaly percentage: 13.85%
+Threshold: 403
+Branch: 2
+ROC-AUC mean: 1.0
+ROC-AUC std: 0.0
+AP mean: 1.0
+AP std: 0.0
+Training time: 1.780682102839152
+Testing time: 12.183265495300294
+
+Synthetic v2
+Observations: 3250
+Features: 50
+Normal: 2800
+Anomalies: 450
+Anomaly percentage: 13.85%
+Shifted features: 10
+Threshold: 403
+Branch: 2
+ROC-AUC mean: 0.9771110052910053
+ROC-AUC std: 0.005046142032633482
+AP mean: 0.9381383739284778
+AP std: 0.015855265237559923
+Training time: 1.5598671754201254
+Testing time: 10.40969173113505
+
+Mammography
+Source: existing external benchmark dataset
+Observations: 11183
+Features: 6
+Normal: 10923
+Anomalies: 260
+Anomaly percentage: 2.32%
+Threshold: 403
+Branch: 2
+ROC-AUC mean: 0.8622895583771716
+ROC-AUC std: 0.0031284068197810727
+AP mean: 0.202895977990613
+AP std: 0.01209607528234221
+Training time: 2.488784742355347
+Testing time: 28.168519020080566
+
+AD dataset - Branch 0
+Observations: 3279
+Features: 1555
+Normal: 2820
+Anomalies: 459
+Anomaly percentage: 14.00%
+Threshold: 403
+Branch: 0
+ROC-AUC mean: 0.773794892792946
+ROC-AUC std: 0.006730388043917898
+AP mean: 0.44401991891872683
+AP std: 0.04382613810625245
+Training time: 8.192117643356323
+Testing time: 13.657418648401896
