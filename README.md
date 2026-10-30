@@ -1,3 +1,5 @@
+> **COMP8240 reproduction project:** See [REPRODUCTION.md](REPRODUCTION.md) for experiments, datasets, results, and setup instructions.
+
 # Optimal Isolation Forest for Anomaly Detection
 This repository contains the code for the experiments of the paper "OptIForest: Optimal Isolation Forest for Anomaly Detection".
 

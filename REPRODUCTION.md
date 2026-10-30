@@ -67,8 +67,8 @@ Additional real-world anomaly detection dataset.
 Preparation script: scripts/prepare_mammography.py
 
 Raw source data is not included in this repository.
-Its download source and redistribution terms
-must be documented before publication.
+See Section 8 for the verified public download
+and preprocessing instructions.
 
 ### Synthetic v1
 Generated using scripts/generate_synthetic.py.
