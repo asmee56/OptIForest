@@ -130,3 +130,33 @@ Xiang et al. (IJCAI 2023).
 The additional preprocessing scripts, synthetic
 data generators, experiments and documentation
 are part of this COMP8240 reproduction project.
+
+## 8. Reproducing the Mammography Experiment
+
+Dataset: Mammography, OpenML dataset 310.
+
+Public CSV source:
+https://datahub.io/core/openml-datasets/data/mammography
+
+The downloaded public CSV was compared against
+the original local dataset. Its columns, values,
+and row order matched exactly.
+
+From the project root, install the dependencies
+listed in requirements-reproduction.txt.
+
+Download and prepare the dataset:
+
+    PYTHON=venv/bin/python bash scripts/setup_mammography.sh
+
+Run the experiments:
+
+    venv/bin/python demo.py --dataset=mammography --threshold=403 --branch=0
+    venv/bin/python demo.py --dataset=mammography --threshold=403 --branch=2
+
+The setup script downloads the dataset if the
+raw file is missing and converts its class labels
+to the format required by OptIForest.
+
+The raw Mammography dataset is not included
+in the GitHub repository.
