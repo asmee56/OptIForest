@@ -1,5 +1,59 @@
 # OptIForest Reproduction Project
 
+## Quick Start: Reproduce the Experiments
+
+Use Python 3.10 and run commands from the project root.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/asmee56/OptIForest.git
+cd OptIForest
+```
+
+### 2. Create the environment
+
+```bash
+python3.10 -m venv venv
+venv/bin/python -m pip install -r requirements-reproduction.txt
+```
+
+### 3. Prepare the datasets
+
+```bash
+venv/bin/python scripts/generate_synthetic.py
+venv/bin/python scripts/generate_synthetic_v2.py
+PYTHON=venv/bin/python bash scripts/setup_mammography.sh
+```
+
+The original AD dataset is included in the repository.
+
+### 4. Run the experiments
+
+```bash
+venv/bin/python demo.py --dataset=ad --threshold=403 --branch=0
+venv/bin/python demo.py --dataset=ad --threshold=403 --branch=2
+venv/bin/python demo.py --dataset=mammography --threshold=403 --branch=0
+venv/bin/python demo.py --dataset=mammography --threshold=403 --branch=2
+venv/bin/python demo.py --dataset=synthetic --threshold=403 --branch=2
+venv/bin/python demo.py --dataset=synthetic_v2 --threshold=403 --branch=0
+venv/bin/python demo.py --dataset=synthetic_v2 --threshold=403 --branch=2
+```
+
+### 5. Generate the comparison figure
+
+```bash
+venv/bin/python scripts/plot_branch_comparison.py
+```
+
+The reported experiments use 100 trees, a threshold
+of 403, and 15 repeated model fits per configuration.
+Detector randomness is not explicitly seeded,
+so results may vary slightly between runs.
+
+---
+
+
 COMP8240 - Applications of Data Science
 Macquarie University
 
@@ -38,7 +92,7 @@ Full dependencies: requirements-reproduction.txt
 - Repetitions: 15 per configuration
 - Branching configurations: 0 and 2
 - Metrics: ROC-AUC, Average Precision
-- Additional measurements: Training and testing time
+- Additional measurements: Training and scoring time
 
 The supplied demo.py fits the detector on all feature
 rows and evaluates anomaly scores on those same rows.
